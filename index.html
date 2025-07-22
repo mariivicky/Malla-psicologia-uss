@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva Psicología</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Interactiva - Psicología</h1>
+  <div id="malla-container"></div>
+  <button id="reset">🔄 Reiniciar Malla</button>
+
+  <script>
+    const malla = [
+      {
+        semestre: 1,
+        ramos: [
+          "Estrategias para el aprendizaje",
+          "Fundamentos biológicos del comportamiento",
+          "Fundamentos filosóficos de la Psicologia",
+          "Evolución histórica de la Psicologia",
+          "Procesos cognitivos",
+          "Taller de comunicación",
+          "Antropología"
+        ]
+      },
+      {
+        semestre: 2,
+        ramos: [
+          { nombre: "Ética", prereqs: ["Antropología"] },
+          { nombre: "Neuropsicología", prereqs: ["Fundamentos biológicos del comportamiento"] },
+          "Fundamentos socio antropológicos del comportamiento",
+          "Introducción a la metodología de la investigación",
+          "Procesos afectivos",
+          "Taller de trabajo grupal"
+        ]
+      },
+      {
+        semestre: 3,
+        ramos: [
+          { nombre: "Electivo de formación integral 1", prereqs: ["Ética"] },
+          "Psicologia social",
+          { nombre: "Psicologia evolutiva 1", prereqs: ["Procesos cognitivos", "Procesos afectivos"] },
+          { nombre: "Metodología de la investigación aplicada a la Psicologia", prereqs: ["Introducción a la metodología de la investigación"] },
+          { nombre: "Psicologia de la personalidad", prereqs: ["Procesos cognitivos", "Procesos afectivos"] },
+          "Taller de entrevista"
+        ]
+      },
+      {
+        semestre: 4,
+        ramos: [
+          "Electivo de formación integral 2",
+          { nombre: "Psicologia social 2", prereqs: ["Psicologia social"] },
+          { nombre: "Psicologia evolutiva 2", prereqs: ["Psicologia evolutiva 1"] },
+          { nombre: "Análisis de datos cuantitativos", prereqs: ["Metodología de la investigación aplicada a la Psicologia"] },
+          { nombre: "Psicopatología general", prereqs: ["Psicologia de la personalidad"] },
+          { nombre: "Evaluación psicológica cognitiva", prereqs: ["Neuropsicología", "Psicologia de la personalidad"] }
+        ]
+      },
+      {
+        semestre: 5,
+        ramos: [
+          "Electivo de formación integral 3",
+          { nombre: "Teorías psicológicas 1", prereqs: ["Evolución histórica de la Psicologia"] },
+          { nombre: "Psicopatología y psiquiatría infantil", prereqs: ["Psicopatología general"] },
+          { nombre: "Análisis de datos cualitativos", prereqs: ["Metodología de la investigación aplicada a la Psicologia"] },
+          "Políticas publicas",
+          { nombre: "Evaluación psicológica de la personalidad", prereqs: ["Evaluación psicológica cognitiva"] }
+        ]
+      },
+      {
+        semestre: 6,
+        ramos: [
+          "Electivo de formación integral IV",
+          { nombre: "Teorías psicológicas 2", prereqs: ["Evolución histórica de la Psicologia"] },
+          { nombre: "Psicopatología y psiquiatría adulto", prereqs: ["Psicopatología general"] },
+          { nombre: "Taller persona del psicólogo", prereqs: ["Evaluación psicológica de la personalidad"] },
+          "Introducción a la formación y evaluación de proyectos sociales",
+          { nombre: "Evaluación psicológica integrada", prereqs: ["Evaluación psicológica de la personalidad"] }
+        ]
+      },
+      {
+        semestre: 7,
+        ramos: [
+          { nombre: "Introducción a la psicoterapia psicoanalítica", prereqs: ["Teorías psicológicas 1"] },
+          { nombre: "Introducción a la psicoterapia sistémica", prereqs: ["Teorías psicológicas 1"] },
+          { nombre: "Comportamiento organizacional", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Psicologia social 2"] },
+          { nombre: "Factores psicológicos en procesos educativos", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Psicologia evolutiva 2"] },
+          { nombre: "Problemas psicosociales actuales", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Psicologia social 2"] },
+          { nombre: "Integración en Psicologia", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2"] }
+        ]
+      },
+      {
+        semestre: 8,
+        ramos: [
+          { nombre: "Introducción a la psicoterapia cognitiva", prereqs: ["Teorías psicológicas 2"] },
+          { nombre: "Introducción a la psicoterapia humanista", prereqs: ["Teorías psicológicas 2"] },
+          { nombre: "Gestión de personas y organizaciones", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Factores psicológicos en procesos educativos"] },
+          { nombre: "Gestión escolar", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Factores psicológicos en procesos educativos"] },
+          { nombre: "Psicologia comunitaria", prereqs: ["Teorías psicológicas 1", "Teorías psicológicas 2", "Factores psicológicos en procesos educativos"] },
+          "Electivo de especialización 1"
+        ]
+      },
+      {
+        semestre: 9,
+        ramos: [
+          "Electivo diseño e intervención",
+          "Electivo diseño en contextos",
+          "Electivo de especialización 2",
+          { nombre: "Proyecto de investigación", prereqs: ["Análisis de datos cuantitativos"] }
+        ]
+      },
+      {
+        semestre: 10,
+        ramos: [
+          { nombre: "Práctica profesional", prereqs: ["TODO"] },
+          { nombre: "Seminario de investigación", prereqs: ["TODO"] },
+          "Electivo de especialización 3"
+        ]
+      }
+    ];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
 
